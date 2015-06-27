@@ -17,6 +17,7 @@
     // Get all assets
     this.getAssets = function () {
       return $http.get(endpoint, PARSE.CONFIG);
+    };
 
     // Get all images
     this.getAll = function() {

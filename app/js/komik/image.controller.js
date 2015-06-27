@@ -7,6 +7,7 @@
 
   function ($scope, ImageService, $http, PARSE, $location) {
 
+
         $('canvas').drawImage({
           layer: true,
           source: "http://i.imgur.com/0XYZC08.jpg",
@@ -38,7 +39,6 @@
             crossOrigin: 'anonymous'
         });
 
-      }
 
     var imageGroup = [];
 
