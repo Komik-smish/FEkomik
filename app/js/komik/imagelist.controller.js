@@ -7,7 +7,10 @@
 
     function ($scope, ImageService, $http, HEROKU) {
 
+      window.is = ImageService;
+
       ImageService.getAll().success(function(data) {
+
         $scope.imageList = data.results;
       });
 
