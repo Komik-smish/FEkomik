@@ -3,7 +3,7 @@
   <ul class="small-block-grid-3">
     <li ng-repeat="i in imageList">
 
-      <a href="#/" ng-click="store(i.image_url)"><img id="chosen-image" ng-src="{{ i.image_url }}"></a>
+      <a href="#/" ng-click="store(i.image_url)" style:"position:relative;"><img id="chosen-image" ng-src="{{ i.image_url }}"><span>&times;</span></a>
 
     </li>
   </ul>
@@ -53,5 +53,9 @@
     </div>
 
   </div>
+
+</div>
+
+<div class = "row comic-strip-create" id = "comic-strip-create">
 
 </div>
