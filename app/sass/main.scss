@@ -97,6 +97,19 @@ header {
     // text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
   }
 
+  nav {
+    display: inline-block;
+    float: right;
+    color: white;
+    margin-top: 1em;
+
+
+    p {
+      margin-top: 1em;
+      cursor: pointer;
+    }
+  }
+
   .innerheader {
     width: 80%;
     margin: auto;

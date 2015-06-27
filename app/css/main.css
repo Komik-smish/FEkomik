@@ -65,6 +65,14 @@ header {
   header a {
     color: #f23c27;
     text-shadow: 3px 1px 0px white; }
+  header nav {
+    display: inline-block;
+    float: right;
+    color: white;
+    margin-top: 1em; }
+    header nav p {
+      margin-top: 1em;
+      cursor: pointer; }
   header .innerheader {
     width: 80%;
     margin: auto; }
