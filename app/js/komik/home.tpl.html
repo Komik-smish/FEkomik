@@ -5,6 +5,7 @@
 
   <ul class="small-block-grid-4">
     <li ng-repeat="i in imageList">
+      <input type="checkbox" [ng-true-value="true"] [ng-false-value="false"]>
       <a href="#/" ng-click="store(i.image_url)"><img id="chosen-image" ng-src="{{ i.image_url }}"></a>
     </li>
   </ul>
@@ -13,29 +14,44 @@
 
 <div class="row singlepix" id="single-pix">
 
-<div class="create">
+  <div class="create">
 
- <aside>
-   <div class="aside-top">
-     <h4>Click on an accessory to add it to your Komik!</h4>
-     <hr />
-   </div>
+    <aside>
+      <div class="aside-top">
+        <h4>Accessories</h4>
+        <hr />
+      </div>
+
 
    <div class="aside-bottom">
      <ul>
-       <li ng-repeat="a in assetList"><img ng-src="{{a.asset_url}}" ng-click="addToCanvas(a.asset_url)"></li>
+       <li class="row" ng-repeat="a in accessoryList">
+
+        <div style="position:relative;display: inline-block;"><img ng-src="{{a.accessory_url}}" ng-click="addToCanvasSmall(a.accessory_url)" style="width:50px;height:50px;"><span style="position:absolute; color:#1A323D; left:0; top: -10px; font-size: 0.75em;">Small</span><span class = "flip" style="position:absolute; color:#1A323D; left:0; top: 25px; font-size: 0.75em;cursor:pointer;" ng-click="addToCanvasFlippedSmall(a.accessory_url)">Flip</span></div>
+
+        <div style="position:relative;display: inline-block;"><img ng-src="{{a.accessory_url}}" ng-click="addToCanvasMedium(a.accessory_url)" style="width:50px;height:50px;"><span style="position:absolute; color:#1A323D; left:0; top: -10px; font-size: 0.75em;">Medium</span><span class = "flip" style="position:absolute; color:#1A323D; left:0; top: 25px; font-size: 0.75em;cursor:pointer;" ng-click="addToCanvasFlippedMedium(a.accessory_url)">Flip</span></div>
+
+        <div style="position:relative;display: inline-block;"><img ng-src="{{a.accessory_url}}" ng-click="addToCanvasLarge(a.accessory_url)" style="width:50px;height:50px;"><span style="position:absolute; color:#1A323D; left:0; top: -10px; font-size: 0.75em;">Large</span><span class = "flip" style="position:absolute; color:#1A323D; left:0; top: 25px; font-size: 0.75em;cursor:pointer;" ng-click="addToCanvasFlippedLarge(a.accessory_url)">Flip</span></div>
+
+      </li>
      </ul>
    </div>
  </aside>
 
 
- <div class="rightside">
- <div class="canvas">
-  <canvas width='400' height='500'></canvas>
-</div>
-  <button ng-click="download()">Download Image</button>
- </div>
+    <div class="rightside">
+      <div class="canvas">
+        <canvas width='400' height='500'></canvas>
+      </div>
+      <p>Add some words:</p>
+      <form class="addtext-form" ng-click="addText(imageList.text)">
+        <input type="text" ng-model="imageList.text">
+        <button>Add Text</button>
+      </form>
+      <button ng-click="download()">Download Image</button>
 
-</div>
+    </div>
+
+  </div>
 
 </div>

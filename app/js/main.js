@@ -4,7 +4,7 @@
 
   angular.module('Komik', ['ngRoute']).constant('HEROKU', {
 
-    URL: 'https://shrouded-peak-4702.herokuapp.com/',
+    URL: 'http://salty-peak-7300.herokuapp.com/',
     CONFIG: {
       // headers: {
       // 'X-Parse-Application-Id': 'RiQBNnq9Zct2WTY7fCRA7EYr5euAisXXb0UWYy5E',
