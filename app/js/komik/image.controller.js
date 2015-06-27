@@ -45,17 +45,13 @@
           var a = $("<a>").attr("href", image).attr("download", "img.png").appendTo("body");
 
           a[0].click();
-
           a.remove();
         };
 
-      ImageService.deleteImage(x).success( function(){
 
-        var imageGroup = [];
+    $scope.uploadImage = function(x) {
+      ImageService.upload(x).success( function() {
 
-
-        $scope.uploadImage = function(x) {
-          ImageService.upload(x).success( function() {
 
           $('[data-id="'+ x.objectId + '"]').fadeOut( function () {
             $scope.imageGroup = _.without($scope.imageGroup, x);

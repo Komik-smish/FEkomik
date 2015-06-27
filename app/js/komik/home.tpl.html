@@ -1,7 +1,16 @@
-<div class="home">
+<div class="row allpix" id="all-pix">
 
-  <p>TESTING HOME</p>
+  <ul class="small-block-grid-3">
+    <li ng-repeat="i in imageList">
+      <a href="#/" ng-click="store(i.image_url)"><img id="chosen-image" ng-src="{{ i.image_url }}"></a>
+    </li>
+  </ul>
 
+</div>
 
+<div class="row singlepix" id="single-pix">
+
+  <canvas id="canvas" height="500" width="400">
+  </canvas>
 
 </div>

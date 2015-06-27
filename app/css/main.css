@@ -61,6 +61,10 @@ header {
 
 /* MAIN PAGE
 ----------- */
+.singlepix {
+  height: 800px;
+  display: none; }
+
 /* CREATE PAGE
 -------------- */
 .create {
