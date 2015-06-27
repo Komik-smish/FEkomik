@@ -4,10 +4,10 @@
 
   angular.module('Komik')
 
-  .service('ImageService', ['$http', 'PARSE', '$routeParams', function($http, PARSE, routeParams){
+  .service('ImageService', ['$http', 'HEROKU', '$routeParams', function($http, HEROKU, $routeParams){
 
     // Endpoint
-    var endpoint = PARSE.URL + 'classes/images';
+    var endpoint = HEROKU.URL;
 
     // Image upload constructor
     var Image = function (options) {
@@ -16,24 +16,24 @@
 
     // Get all assets
     this.getAssets = function () {
-      return $http.get(endpoint, PARSE.CONFIG);
+      return $http.get(endpoint + '/assets', HEROKU.CONFIG);
     };
 
     // Get all images
     this.getAll = function() {
-      $http.get(endpoint, PARSE.CONFIG);
+      return $http.get(endpoint + '/images', HEROKU.CONFIG);
     };
 
     // Delete image
     this.deleteImage = function(x) {
       var URLtoDelete = endpoint + x.objectId;
-      return $http.delete(URLtoDelete, PARSE.CONFIG);
+      return $http.delete(URLtoDelete, HEROKU.CONFIG);
     };
 
     // Add new image
     this.upload = function(x) {
       var img = new Image(x);
-      return $http.post( endpoint, img, PARSE.CONFIG);
+      return $http.post( endpoint + '/images', img, HEROKU.CONFIG );
     };
 
   }]);

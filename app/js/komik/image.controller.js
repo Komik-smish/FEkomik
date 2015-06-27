@@ -3,9 +3,9 @@
   'use strict';
 
   angular.module('Komik')
-    .controller('Image', ['$scope', '$http', 'ImageService', 'PARSE', '$location',
+    .controller('Image', ['$scope', '$http', 'ImageService', 'HEROKU', '$location',
 
-  function ($scope, ImageService, $http, PARSE, $location) {
+  function ($scope, $http, ImageService, HEROKU, $location) {
 
 
         $('canvas').drawImage({
@@ -44,7 +44,7 @@
 
     $scope.removePic = function(x) {
 
-      ImagelistService.deleteImage(x).success( function(){
+      ImageService.deleteImage(x).success( function(){
 
         $('[data-id="'+ x.objectId + '"]').fadeOut( function () {
           $scope.imageGroup = _.without($scope.imageGroup, x);
@@ -54,8 +54,7 @@
     };
 
     $scope.uploadImage = function(x) {
-
-      ImagelistService.upload(x).success( function() {
+      ImageService.upload(x).success( function() {
 
         $location.path('/');
         $scope.image = {};
