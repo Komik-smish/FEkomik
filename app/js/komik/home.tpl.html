@@ -5,17 +5,14 @@
       <li ng-repeat="i in imageList">
         <a href="#/" ng-click="store(i.image_url)"><img id="chosen-image" ng-src="{{ i.image_url }}"></a>
       </li>
-
     </ul>
-
   </div>
 
 </div>
 
 <div class="row singlepix" id="single-pix">
-
   <div class="create">
-<p ng-click="reload()">home</p>
+    <p ng-click="reload()">home</p>
 
     <aside>
       <div class="aside-top">
@@ -29,14 +26,16 @@
      <ul>
        <li class="row" ng-repeat="a in accessoryList">
 
-        <div style="position:relative;display: inline-block;"><img ng-src="{{a.accessory_url}}" ng-click="addToCanvasSmall(a.accessory_url)" style="width:50px;height:50px;"><span style="position:absolute; color:#1A323D; left:0; top: 5px; font-size: 0.75em;">Small</span><span class = "flip" style="position:absolute; color:#1A323D; left:0; top: 25px; font-size: 0.75em;">Flip</span></div>
+        <div style="position:relative;display: inline-block;"><img ng-src="{{a.accessory_url}}" ng-click="addToCanvasSmall(a.accessory_url)" style="width:50px;height:50px;"><span style="position:absolute; color:#1A323D; left:0; top: -10px; font-size: 0.75em;">Small</span><span class = "flip" style="position:absolute; color:#1A323D; left:0; top: 25px; font-size: 0.75em;cursor:pointer;" ng-click="addToCanvasFlippedSmall(a.accessory_url)">Flip</span></div>
 
-        <div style="position:relative;display: inline-block;"><img ng-src="{{a.accessory_url}}" ng-click="addToCanvasMedium(a.accessory_url)" style="width:50px;height:50px;"><span style="position:absolute; color:#1A323D; left:0; top: 5px; font-size: 0.75em;">Medium</span><span class = "flip" style="position:absolute; color:#1A323D; left:0; top: 25px; font-size: 0.75em;">Flip</span></div>
+        <div style="position:relative;display: inline-block;"><img ng-src="{{a.accessory_url}}" ng-click="addToCanvasMedium(a.accessory_url)" style="width:50px;height:50px;"><span style="position:absolute; color:#1A323D; left:0; top: -10px; font-size: 0.75em;">Medium</span><span class = "flip" style="position:absolute; color:#1A323D; left:0; top: 25px; font-size: 0.75em;cursor:pointer;" ng-click="addToCanvasFlippedMedium(a.accessory_url)">Flip</span></div>
 
-        <div style="position:relative;display: inline-block;"><img ng-src="{{a.accessory_url}}" ng-click="addToCanvasLarge(a.accessory_url)" style="width:50px;height:50px;"><span style="position:absolute; color:#1A323D; left:0; top: 5px; font-size: 0.75em;">Large</span><span class = "flip" style="position:absolute; color:#1A323D; left:0; top: 25px; font-size: 0.75em;">Flip</span></div>
+        <div style="position:relative;display: inline-block;"><img ng-src="{{a.accessory_url}}" ng-click="addToCanvasLarge(a.accessory_url)" style="width:50px;height:50px;"><span style="position:absolute; color:#1A323D; left:0; top: -10px; font-size: 0.75em;">Large</span><span class = "flip" style="position:absolute; color:#1A323D; left:0; top: 25px; font-size: 0.75em;cursor:pointer;" ng-click="addToCanvasFlippedLarge(a.accessory_url)">Flip</span></div>
 
       </li>
      </ul>
+
+     <button ng-click="restoreImageCanvas()">Reset Toon</button>
    </div>
  </aside>
 

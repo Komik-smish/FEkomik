@@ -32,6 +32,8 @@
           autosave: true,
           crossOrigin: 'anonymous'
         });
+
+        $scope.storage = image_url;
       };
 
       $scope.addToCanvasSmall = function (assetUrl) {
@@ -58,7 +60,7 @@
           width: 125,
           height: 125,
           x: 200, y: 200,
-          crossOrigin: 'anonymous'
+          // crossOrigin: 'anonymous'
         });
       };
 
@@ -72,7 +74,7 @@
           width: 200,
           height: 200,
           x: 200, y: 200,
-          crossOrigin: 'anonymous'
+          // crossOrigin: 'anonymous'
         });
       };
 
@@ -83,10 +85,12 @@
           source: assetUrl,
           draggable: true,
           bringToFront: true,
-          width: -50,
+          width: 50,
           height: 50,
+          scaleX: -1,
           x: 200, y: 200,
-          crossOrigin: 'anonymous'
+          crossOrigin: 'anonymous',
+          inverted: true
         });
       };
 
@@ -97,10 +101,12 @@
           source: assetUrl,
           draggable: true,
           bringToFront: true,
-          width: -125,
+          width: 125,
           height: 125,
+          scaleX:  -1,
           x: 200, y: 200,
-          crossOrigin: 'anonymous'
+          crossOrigin: 'anonymous',
+          inverted: true
         });
       };
 
@@ -111,10 +117,12 @@
           source: assetUrl,
           draggable: true,
           bringToFront: true,
-          width: -200,
+          width: 200,
           height: 200,
+          scaleX:  -1,
           x: 200, y: 200,
-          crossOrigin: 'anonymous'
+          crossOrigin: 'anonymous',
+          inverted: true
         });
       };
 
@@ -142,6 +150,18 @@
 
       $scope.reload = function () {
         window.location.reload();
+
+      $scope.restoreImageCanvas = function() {
+        $('canvas').clearCanvas();
+        $('canvas').drawImage({
+          layer: true,
+          source: $scope.storage,
+          width: 400,
+          height: 400,
+          x: 200, y: 200,
+          autosave: true,
+          crossOrigin: 'anonymous'
+        });
       };
 
     }]);
