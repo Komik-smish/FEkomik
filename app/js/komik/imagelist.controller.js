@@ -33,7 +33,7 @@
           crossOrigin: 'anonymous'
         });
 
-        $('canvas').saveCanvas();
+        $scope.storage = image_url;
       };
 
       $scope.addToCanvasSmall = function (assetUrl) {
@@ -150,6 +150,18 @@
         });
       };
 
+      $scope.restoreImageCanvas = function() {
+        $('canvas').clearCanvas();
+        $('canvas').drawImage({
+          layer: true,
+          source: $scope.storage,
+          width: 400,
+          height: 400,
+          x: 200, y: 200,
+          autosave: true,
+          crossOrigin: 'anonymous'
+        });
+      };
 
     }]);
 
