@@ -14,6 +14,10 @@
       this.image_url = options.image_url;
     };
 
+    // Get all assets
+    this.getAssets = function () {
+      return $http.get(endpoint, PARSE.CONFIG);
+    };
 
 
   }]);
