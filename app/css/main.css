@@ -1,4 +1,3 @@
-
 html {
   box-sizing: border-box; }
 
@@ -53,3 +52,12 @@ header {
       padding: 13px 0;
       font-size: 3em; }
 
+/* ADD IMAGE TPL
+---------- */
+.text-center {
+  padding-bottom: 215px;
+  padding-top: 67px; }
+
+.imageform {
+  margin-left: 230px;
+  margin-right: 230px; }
