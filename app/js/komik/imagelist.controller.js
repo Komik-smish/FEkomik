@@ -34,6 +34,8 @@
           autosave: true,
           crossOrigin: 'anonymous'
         });
+
+        $('canvas').saveCanvas();
       };
 
       $scope.addToCanvasSmall = function (assetUrl) {
