@@ -1,1 +1,32 @@
-<p>TESTING CREATE</p>
+<div class="create">
+
+<div>
+  <div class="selector"></div>
+</div>
+
+
+  <div class="top">
+    <img src="http://www.placehold.it/275x500">
+  </div>
+
+  <div class="assets">
+
+  </div>
+
+</div>
+
+<script type="text/javascript">
+
+  var dragposition = '';
+
+  $( ".selector" ).draggable({
+    drag: function (event, ui) {
+      dragposition = ui.position;
+      console.log(dragposition);
+    }
+  });
+
+
+  // var addClasses = $( ".selector" ).draggable( "option", "addClasses" );
+
+</script>
