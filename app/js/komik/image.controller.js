@@ -25,6 +25,7 @@
         });
 
         $scope.addToCanvas = function (assetUrl) {
+          console.log(assetUrl);
           $('canvas').drawImage({
             layer: true,
             source: assetUrl,
@@ -48,11 +49,6 @@
 
           a.remove();
         };
-
-      ImageService.deleteImage(x).success( function(){
-
-        var imageGroup = [];
-
 
         $scope.uploadImage = function(x) {
           ImageService.upload(x).success( function() {
