@@ -50,6 +50,7 @@ input, button {
 .container {
   width: 100%;
   margin: auto;
+  margin-top: 43px;
 }
 
 a {
@@ -95,6 +96,12 @@ header {
   }
 }
 
+.instructions {
+   display: inline-block;
+   float: right;
+   margin-top: 25px;
+}
+
 /* MAIN PAGE
 ----------- */
 
@@ -111,6 +118,7 @@ header {
   height: 800px;
   display: none;
 }
+
 
 /* CREATE PAGE
 -------------- */
@@ -133,7 +141,6 @@ header {
     }
   }
 
-<<<<<<< HEAD
 }
 
 
@@ -165,5 +172,13 @@ header {
 
   }
 
+}
+
+/* INSTRUCTIONS TPL
+---------- */
+
+.I-page {
+  margin-left: 260px;
+  margin-top: 90px;
 }
 

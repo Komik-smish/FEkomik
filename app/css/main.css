@@ -33,7 +33,8 @@ input, button {
 
 .container {
   width: 100%;
-  margin: auto; }
+  margin: auto;
+  margin-top: 43px; }
 
 a {
   text-decoration: none; }
@@ -56,20 +57,13 @@ header {
     header .innerheader .logo {
       overflow: hidden;
       display: inline-block;
-      padding: 13px 0;
-      font-size: 3em; }
+      font-size: 6em;
+      font-family: "Bangers", cursive; }
 
-/* ADD IMAGE TPL
----------- */
-.text-center {
-  padding-bottom: 215px;
-  padding-top: 67px; }
-
-.imageform {
-  margin-left: 230px;
-  margin-right: 230px;
-  font-size: 6em;
-  font-family: "Bangers", cursive; }
+.instructions {
+  display: inline-block;
+  float: right;
+  margin-top: 25px; }
 
 /* MAIN PAGE
 ----------- */
@@ -103,16 +97,31 @@ header {
       font-size: 2em;
       padding: .5em;
       text-align: center; }
-  .create .rightside {
+
+/* ADD IMAGE TPL
+---------- */
+.text-center {
+  padding-bottom: 215px;
+  padding-top: 67px; }
+
+.imageform {
+  margin-left: 230px;
+  margin-right: 230px; }
+  .imageform .rightside {
     overflow: hidden;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%; }
-    .create .rightside:last-child {
+    .imageform .rightside:last-child {
       margin-right: 0; }
-  .create .canvas {
+  .imageform .canvas {
     overflow: hidden;
     width: 60%;
     margin: auto; }
 
+/* INSTRUCTIONS TPL
+---------- */
+.I-page {
+  margin-left: 260px;
+  margin-top: 90px; }
