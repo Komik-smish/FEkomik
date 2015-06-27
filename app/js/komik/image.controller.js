@@ -3,10 +3,14 @@
   'use strict';
 
   angular.module('Komik')
-    .controller('Image', ['$scope', '$http', 'ImageService', 'PARSE', '$location',
+    .controller('Image', ['$scope', 'ImageService', '$http', 'HEROKU', '$location',
 
-  function ($scope, ImageService, $http, PARSE, $location) {
+      function ($scope, ImageService, $http, HEROKU, $location) {
 
+        ImageService.getAssets().success( function (data) {
+          console.log(data.assets);
+          $scope.assetList = data.assets;
+        });
 
         $('canvas').drawImage({
           layer: true,
@@ -16,52 +20,53 @@
           x: 250, y: 250,
           autosave: true,
           crossOrigin: 'anonymous'
-        })
+        });
 
-        .drawImage({
+        $scope.addToCanvas = function (assetUrl) {
+          $('canvas').drawImage({
             layer: true,
-            source: "http://i422.photobucket.com/albums/pp302/KatieLezz/Clothes/Hat-cowboy-brown-icon-1.png",
+            source: assetUrl,
             draggable: true,
             bringToFront: true,
             width: 200,
             height: 200,
             x: 200, y: 200,
-            dragstop: function () {
-              $('canvas').saveCanvas();
-              var image = $('canvas').getCanvasImage('png');
-              console.log(image);
-              var a = $("<a>").attr("href", image).attr("download", "img.png").appendTo("body");
+            crossOrigin: 'anonymous',
+          });
+          $(event.target).fadeOut();
+        };
 
-              a[0].click();
+        $scope.download = function () {
+          $('canvas').saveCanvas();
+          var image = $('canvas').getCanvasImage('png');
+          console.log(image);
+          var a = $("<a>").attr("href", image).attr("download", "img.png").appendTo("body");
 
-              a.remove();
-            },
-            crossOrigin: 'anonymous'
+          a[0].click();
+
+          a.remove();
+        };
+
+
+        var imageGroup = [];
+
+        $scope.removePic = function(x) {
+
+        ImageService.deleteImage(x).success( function(){
+
+          $('[data-id="'+ x.objectId + '"]').fadeOut( function () {
+            $scope.imageGroup = _.without($scope.imageGroup, x);
+          });
+
         });
+      };
 
-
-    var imageGroup = [];
-
-    $scope.removePic = function(x) {
-
-      ImagelistService.deleteImage(x).success( function(){
-
-        $('[data-id="'+ x.objectId + '"]').fadeOut( function () {
-          $scope.imageGroup = _.without($scope.imageGroup, x);
-        });
-
-      });
-    };
-
-    $scope.uploadImage = function(x) {
-
-      ImagelistService.upload(x).success( function() {
-
-        $location.path('/');
-        $scope.image = {};
-
-      });
-    };
+        $scope.uploadImage = function(x) {
+          ImageService.upload(x).success( function() {
+            $location.path('/');
+            $scope.image = {};
+          });
+        };
 
   }]);
 

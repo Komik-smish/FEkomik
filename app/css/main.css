@@ -16,7 +16,11 @@ html {
   box-sizing: border-box; }
 
 body {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  font-family: "Questrial", sans-serif;
+  color: #1a323e;
+  font-family: "Questrial", sans-serif;
+  background-color: #FAFAFA; }
 
 input, button {
   border: none;
@@ -71,17 +75,24 @@ header {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 23.23176%;
-    background-color: #902724;
-    height: 100vh; }
+    width: 31.76157%;
+    height: 100vh;
+    border-right: 1px solid #EDEEEE;
+    background-color: white; }
     .create aside:last-child {
       margin-right: 0; }
+    .create aside h4 {
+      color: #1b729f;
+      padding: 1em;
+      font-size: 2em;
+      padding: .5em;
+      text-align: center; }
   .create .rightside {
     overflow: hidden;
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 74.41059%; }
+    width: 65.88078%; }
     .create .rightside:last-child {
       margin-right: 0; }
   .create .canvas {
