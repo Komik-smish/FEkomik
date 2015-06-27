@@ -12,7 +12,7 @@
       }
     }
   })
-  .config(['$routeProvider', function($routeProvider) {
+  .config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider.when('/', {
       controller: 'ImageList',

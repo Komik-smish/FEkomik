@@ -1,0 +1,53 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+/* DECLARATIONS
+---------------- */
+/* MIXINS
+---------- */
+/* GLOBAL STYLES
+---------------- */
+* {
+  box-sizing: border-box; }
+
+body {
+  font-size: 62.5%; }
+
+input, button {
+  border: none;
+  border-radius: 2px;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s; }
+  input:focus, button:focus {
+    outline: none; }
+
+.container {
+  width: 100%;
+  margin: auto; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+/* HEADER
+---------- */
+header {
+  background-color: #ccc;
+  width: 100%;
+  height: 70px; }
+  header .innerheader {
+    width: 80%;
+    margin: auto; }
+    header .innerheader .logo {
+      overflow: hidden;
+      display: inline-block;
+      padding: 13px 0;
+      font-size: 3em; }
