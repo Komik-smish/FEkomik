@@ -93,7 +93,8 @@ header {
 
   a {
     color: $red;
-    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+    text-shadow: 3px 1px 0px white;
+    // text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
   }
 
   .innerheader {
@@ -105,6 +106,7 @@ header {
       display: inline-block;
       font-size: 6em;
       font-family: $bangers;
+      width: 5em;
     }
   }
 }
@@ -113,9 +115,12 @@ header {
 ----------- */
 
 .home {
+  margin-top: 2em;
   width: 100%;
+  overflow: hidden;
 
   ul {
+
     li {
 
     }
@@ -137,7 +142,7 @@ header {
   aside {
     @include span-columns(4);
     height: 100vh;
-    border-right: 1px solid #EDEEEE;
+    border: 1px solid #EDEEEE;
     background-color: white;
 
     h4 {
@@ -147,6 +152,8 @@ header {
       padding: .5em;
       text-align: center;
       font-family: $bangers;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
   }
 

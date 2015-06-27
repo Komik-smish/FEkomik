@@ -64,7 +64,7 @@ header {
   height: 80px; }
   header a {
     color: #f23c27;
-    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white; }
+    text-shadow: 3px 1px 0px white; }
   header .innerheader {
     width: 80%;
     margin: auto; }
@@ -72,12 +72,15 @@ header {
       overflow: hidden;
       display: inline-block;
       font-size: 6em;
-      font-family: "Bangers", cursive; }
+      font-family: "Bangers", cursive;
+      width: 5em; }
 
 /* MAIN PAGE
 ----------- */
 .home {
-  width: 100%; }
+  margin-top: 2em;
+  width: 100%;
+  overflow: hidden; }
 
 .singlepix {
   height: 800px;
@@ -100,7 +103,7 @@ header {
     margin-right: 2.35765%;
     width: 31.76157%;
     height: 100vh;
-    border-right: 1px solid #EDEEEE;
+    border: 1px solid #EDEEEE;
     background-color: white; }
     .create aside:last-child {
       margin-right: 0; }
@@ -110,7 +113,9 @@ header {
       font-size: 2em;
       padding: .5em;
       text-align: center;
-      font-family: "Bangers", cursive; }
+      font-family: "Bangers", cursive;
+      margin-bottom: 0;
+      padding-bottom: 0; }
   .create .rightside {
     overflow: hidden;
     float: left;

@@ -14,14 +14,14 @@
       });
 
       ImageService.getAccessories().success( function (data) {
-        $scope.accessoryList = data.accessories;
+        $scope.accessoryList = data;
       });
 
 
       $scope.store = function (image_url) {
 
-        $('#all-pix').fadeOut();
-        $('#single-pix').fadeIn();
+        $('#all-pix').slideUp(500);
+        $('#single-pix').fadeIn(1000);
 
         $('canvas').drawImage({
           layer: true,
@@ -44,7 +44,7 @@
           width: 50,
           height: 50,
           x: 200, y: 200,
-          crossOrigin: 'anonymous'
+          // crossOrigin: 'anonymous'
         });
       };
 
@@ -121,9 +121,7 @@
       $scope.download = function () {
         $('canvas').saveCanvas();
         var image = $('canvas').getCanvasImage('png');
-
         var a = $("<a>").attr("href", image).attr("download", "img.png").appendTo("body");
-
         a[0].click();
         a.remove();
       };
@@ -142,6 +140,9 @@
         });
       };
 
+      $scope.reload = function () {
+        window.location.reload();
+      };
 
     }]);
 

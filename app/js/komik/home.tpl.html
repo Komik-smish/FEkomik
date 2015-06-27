@@ -1,17 +1,21 @@
 <div class="row allpix" id="all-pix">
 
-  <ul class="small-block-grid-3">
-    <li ng-repeat="i in imageList">
-      <input type="checkbox" [ng-true-value="true"] [ng-false-value="false"]>
-      <a href="#/" ng-click="store(i.image_url)"><img id="chosen-image" ng-src="{{ i.image_url }}"></a>
-    </li>
-  </ul>
+  <div class="home">
+    <ul class="small-block-grid-3">
+      <li ng-repeat="i in imageList">
+        <a href="#/" ng-click="store(i.image_url)"><img id="chosen-image" ng-src="{{ i.image_url }}"></a>
+      </li>
+
+    </ul>
+
+  </div>
 
 </div>
 
 <div class="row singlepix" id="single-pix">
 
   <div class="create">
+<p ng-click="reload()">home</p>
 
     <aside>
       <div class="aside-top">
@@ -21,6 +25,7 @@
 
 
    <div class="aside-bottom">
+
      <ul>
        <li class="row" ng-repeat="a in accessoryList">
 
