@@ -40,19 +40,6 @@
         });
 
 
-    var imageGroup = [];
-
-    $scope.removePic = function(x) {
-
-      ImageService.deleteImage(x).success( function(){
-
-        $('[data-id="'+ x.objectId + '"]').fadeOut( function () {
-          $scope.imageGroup = _.without($scope.imageGroup, x);
-        });
-
-      });
-    };
-
     $scope.uploadImage = function(x) {
       ImageService.upload(x).success( function() {
 
