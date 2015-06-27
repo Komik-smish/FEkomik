@@ -22,7 +22,8 @@
     "angular": "~1.4.1",
     "foundation": "~5.5.2",
     "jquery-ui": "~1.11.4",
-    "angular-route": "~1.4.1"
+    "angular-route": "~1.4.1",
+    "jcanvas": "~14.11.25"
   },
   "devDependencies": {
     "mocha": "~2.2.5",
