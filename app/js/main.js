@@ -2,16 +2,17 @@
 
   'use strict';
 
-  angular.module('Komik', ['ngRoute']).constant('PARSE', {
-    URL: 'https://www.parse.com/1/',
-    CONFIG: {
+  angular.module('Komik', ['ngRoute']).constant('HEROKU', {
 
-      headers: {
-      'X-Parse-Application-Id': 'RiQBNnq9Zct2WTY7fCRA7EYr5euAisXXb0UWYy5E',
-      'X-Parse-REST-API-Key': 'AEGIes9PzVjnRLAE7sMxnoo8vGvU32joy8mmMCf2'
-      }
+    URL: 'https://shrouded-peak-4702.herokuapp.com/',
+    CONFIG: {
+      // headers: {
+      // 'X-Parse-Application-Id': 'RiQBNnq9Zct2WTY7fCRA7EYr5euAisXXb0UWYy5E',
+      // 'X-Parse-REST-API-Key': 'AEGIes9PzVjnRLAE7sMxnoo8vGvU32joy8mmMCf2'
+      // }
     }
   })
+
   .config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider.when('/', {
@@ -25,10 +26,12 @@
     })
 
     .when('/addimage', {
-      controller: 'ImageList',
+      controller: 'Image',
       templateUrl: 'js/komik/addimage.tpl.html'
     });
 
   }]);
 
+
 }());
+

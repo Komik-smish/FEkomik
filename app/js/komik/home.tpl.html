@@ -1,1 +1,38 @@
-<p>TESTING HOME</p>
+<div class="row allpix" id="all-pix">
+
+  <ul class="small-block-grid-3">
+    <li ng-repeat="i in imageList">
+      <a href="#/" ng-click="store(i.image_url)"><img id="chosen-image" ng-src="{{ i.image_url }}"></a>
+    </li>
+  </ul>
+
+</div>
+
+<div class="row singlepix" id="single-pix">
+
+<div class="create">
+
+ <aside>
+   <div class="aside-top">
+     <h4>Click on an accessory to add it to your Komik!</h4>
+     <hr />
+   </div>
+
+   <div class="aside-bottom">
+     <ul>
+       <li ng-repeat="a in assetList"><img ng-src="{{a.asset_url}}" ng-click="addToCanvas(a.asset_url)"></li>
+     </ul>
+   </div>
+ </aside>
+
+
+ <div class="rightside">
+ <div class="canvas">
+  <canvas width='400' height='500'></canvas>
+</div>
+  <button ng-click="download()">Download Image</button>
+ </div>
+
+</div>
+
+</div>

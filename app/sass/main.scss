@@ -5,6 +5,16 @@
 /* DECLARATIONS
 ---------------- */
 
+$bangers: 'Bangers', cursive;
+$fugaz: 'Fugaz One', cursive;
+$quest: 'Questrial', sans-serif;
+
+$darkred: #902724;
+$red: #f23c27;
+$yellow: #f7d281;
+$blue: #1b729f;
+$darkblue: #1a323e;
+$background: #FAFAFA;
 
 /* MIXINS
 ---------- */
@@ -19,9 +29,10 @@
 
 body {
   font-size: 62.5%;
-  // color: $darkgrey;
-  // font-family: $raleway;
-  // background-color: $background;
+  font-family: $quest;
+  color: $darkblue;
+  font-family: $quest;
+  background-color: $background;
 }
 
 input, button {
@@ -62,9 +73,14 @@ button {
 ---------- */
 
 header {
-  background-color: #ccc;
+  background-color: $darkblue;
   width: 100%;
-  height: 70px;
+  height: 80px;
+
+  a {
+    color: $red;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+  }
 
   .innerheader {
     width: 80%;
@@ -73,11 +89,51 @@ header {
     .logo {
       overflow: hidden;
       display: inline-block;
-      padding: 13px 0;
-      font-size: 3em;
+      font-size: 6em;
+      font-family: $bangers;
+    }
+  }
+}
+
+/* MAIN PAGE
+----------- */
+
+.home {
+
+  ul {
+    li {
+
+    }
+  }
+}
+
+.singlepix {
+  height: 800px;
+  display: none;
+}
+
+/* CREATE PAGE
+-------------- */
+
+.create {
+  @include outer-container(100%);
+
+  aside {
+    @include span-columns(4);
+    height: 100vh;
+    border-right: 1px solid #EDEEEE;
+    background-color: white;
+
+    h4 {
+      color: $blue;
+      padding: 1em;
+      font-size: 2em;
+      padding: .5em;
+      text-align: center;
     }
   }
 
+<<<<<<< HEAD
 }
 
 
@@ -93,6 +149,21 @@ header {
 .imageform {
   margin-left: 230px;
   margin-right: 230px;
+
+  .rightside {
+    overflow: hidden;
+    @include span-columns(8);
+  }
+
+  .canvas {
+    overflow: hidden;
+    width: 60%;
+    margin: auto;
+  }
+
+  .assets {
+
+  }
 
 }
 

@@ -3,6 +3,10 @@
 <head>
   <title>Project Name</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="http://fonts.googleapis.com/css?family=Fugaz+One|Bangers" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Questrial" rel="stylesheet" type="text/css">
+
   <link rel="stylesheet" href="css/vendor/normalize.css">
   <link rel="stylesheet" href="css/vendor/foundation.css">
   <link rel="stylesheet" href="css/main.css">
@@ -12,32 +16,31 @@
 <header>
   <div class="innerheader">
     <div class="logo"><a href="#/">KOMIK</a></div>
+
+    <nav>
+
+
+    </nav>
   </div>
 </header>
 
   <div class="container" ng-view>
   </div>
 
-<!--   <canvas style="width: 50em; height: 40em;">
-    <a href="http://i.imgur.com/N9Koe2G.jpg" style="float: left; width: 75%; height: 100%">
-      <img src="http://i.imgur.com/N9Koe2G.jpg" style="width: 100%; height: 100%;">
-    </a>
-  </canvas> -->
-
   <!-- VENDOR -->
   <script src="js/vendor/jquery.js"></script>
   <script src="js/vendor/jquery-ui.js"></script>
+  <script src="js/vendor/jcanvas.js"></script>
   <script src="js/vendor/underscore.js"></script>
   <script src="js/vendor/angular.js"></script>
   <script src="js/vendor/angular-route.js"></script>
 
-
   <!-- MAIN -->
   <script src="js/main.js"></script>
 
+  <script src="js/komik/imagelist.service.js"></script>
   <script src="js/komik/imagelist.controller.js"></script>
   <script src="js/komik/image.controller.js"></script>
-  <script src="js/komik/imagelist.service.js"></script>
 
 </body>
 </html>
