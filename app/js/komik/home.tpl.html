@@ -20,7 +20,15 @@
 
    <div class="aside-bottom">
      <ul>
-       <li ng-repeat="a in assetList"><img ng-src="{{a.asset_url}}" ng-click="addToCanvas(a.asset_url)"></li>
+       <li class="row" ng-repeat="a in accessoryList">
+
+        <div style="position:relative;display: inline-block;"><img ng-src="{{a.accessory_url}}" ng-click="addToCanvasSmall(a.accessory_url)" style="width:50px;height:50px;"><span style="position:absolute; color:#1A323D; left:0; top: 5px; font-size: 0.75em;">Small</span><span class = "flip" style="position:absolute; color:#1A323D; left:0; top: 25px; font-size: 0.75em;">Flip</span></div>
+
+        <div style="position:relative;display: inline-block;"><img ng-src="{{a.accessory_url}}" ng-click="addToCanvasMedium(a.accessory_url)" style="width:50px;height:50px;"><span style="position:absolute; color:#1A323D; left:0; top: 5px; font-size: 0.75em;">Medium</span><span class = "flip" style="position:absolute; color:#1A323D; left:0; top: 25px; font-size: 0.75em;">Flip</span></div>
+
+        <div style="position:relative;display: inline-block;"><img ng-src="{{a.accessory_url}}" ng-click="addToCanvasLarge(a.accessory_url)" style="width:50px;height:50px;"><span style="position:absolute; color:#1A323D; left:0; top: 5px; font-size: 0.75em;">Large</span><span class = "flip" style="position:absolute; color:#1A323D; left:0; top: 25px; font-size: 0.75em;">Flip</span></div>
+
+      </li>
      </ul>
    </div>
  </aside>
