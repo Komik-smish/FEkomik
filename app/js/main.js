@@ -12,7 +12,7 @@
       }
     }
   })
-  .config(['$routeProvider', function($routeProvider) {
+  .config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider.when('/', {
       controller: 'ImageList',
@@ -22,6 +22,11 @@
     .when('/create', {
       controller: 'Image',
       templateUrl: 'js/komik/create.tpl.html'
+    })
+
+    .when('/addimage', {
+      controller: 'ImageList',
+      templateUrl: 'js/komik/addimage.tpl.html'
     });
 
   }]);

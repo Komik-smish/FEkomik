@@ -6,7 +6,15 @@
 
   .service('ImageService', ['$http', 'PARSE', '$routeParams', function($http, PARSE, routeParams){
 
+    // Endpoint
     var endpoint = PARSE.URL + 'classes/images';
+
+    // Image upload constructor
+    var Image = function (options) {
+      this.image_url = options.image_url;
+    };
+
+
 
   }]);
 

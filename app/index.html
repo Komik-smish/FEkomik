@@ -9,6 +9,12 @@
 </head>
 <body ng-app="Komik">
 
+<header>
+  <div class="innerheader">
+    <div class="logo"><a href="#/">KOMIK</a></div>
+  </div>
+</header>
+
   <div class="container" ng-view>
   </div>
 
@@ -21,8 +27,11 @@
   <script src="js/vendor/angular.js"></script>
   <script src="js/vendor/angular-route.js"></script>
 
+
+
   <!-- MAIN -->
   <script src="js/main.js"></script>
+
   <script src="js/komik/imagelist.controller.js"></script>
   <script src="js/komik/image.controller.js"></script>
   <script src="js/komik/imagelist.service.js"></script>
