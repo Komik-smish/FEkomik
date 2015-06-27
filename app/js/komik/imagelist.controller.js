@@ -10,13 +10,11 @@
       $scope.storage = [];
 
       ImageService.getAll().success(function(data) {
-        console.log(data);
         $scope.imageList = data;
       });
 
-      ImageService.getAssets().success( function (data) {
-        console.log(data.assets);
-        $scope.assetList = data.assets;
+      ImageService.getAccessories().success( function (data) {
+        $scope.accessoryList = data.accessories;
       });
 
 
@@ -30,7 +28,7 @@
           source: image_url,
           width: 400,
           height: 400,
-          x: 250, y: 250,
+          x: 200, y: 200,
           autosave: true,
           crossOrigin: 'anonymous'
         });
@@ -59,6 +57,20 @@
 
         a[0].click();
         a.remove();
+      };
+
+      $scope.addText = function (inputText) {
+        console.log(inputText);
+        $('canvas').drawText({
+          fillStyle: '#f23c27',
+          draggable: true,
+          strokeStyle: '#25a',
+          strokeWidth: 0,
+          x: 150, y: 100,
+          fontSize: 36,
+          fontFamily: 'Bangers, cursive',
+          text: inputText
+        });
       };
 
 

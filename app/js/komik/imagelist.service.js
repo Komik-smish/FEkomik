@@ -16,8 +16,8 @@
       };
 
       // Get all assets
-      this.getAssets = function () {
-        return $http.get(endpoint + '/assets', HEROKU.CONFIG);
+      this.getAccessories = function () {
+        return $http.get(endpoint + '/accessories', HEROKU.CONFIG);
       };
 
       // Get all images
