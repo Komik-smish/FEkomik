@@ -150,6 +150,7 @@
 
       $scope.reload = function () {
         window.location.reload();
+      };
 
       $scope.restoreImageCanvas = function() {
         $('canvas').clearCanvas();
