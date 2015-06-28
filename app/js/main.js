@@ -30,7 +30,6 @@
       templateUrl: 'js/komik/addimage.tpl.html'
     })
 
-
     .when('/instructions', {
       templateUrl: 'js/komik/instructions.tpl.html'
     })

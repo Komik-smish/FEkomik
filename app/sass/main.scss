@@ -268,6 +268,10 @@ header {
 
 // }
 
+// .imageform {
+//   margin-left: 230px;
+//   margin-right: 230px;
+
   .rightside {
     overflow: hidden;
     @include span-columns(8);
@@ -329,7 +333,6 @@ header {
     width: 60%;
     margin: auto;
   }
-
 }
 
 
@@ -357,7 +360,6 @@ header {
       margin: auto;
     }
   }
-
 }
 
 /* INSTRUCTIONS TPL
