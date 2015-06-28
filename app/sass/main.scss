@@ -60,7 +60,6 @@ input, button {
 .container {
   width: 100%;
   margin: auto;
-  margin-top: 43px;
 }
 
 a {
@@ -139,14 +138,18 @@ header {
 }
 
 .instructions {
-   margin-top: 25px;
+   margin-top: 15px;
 }
 
 .instructions h5 {
-  color: black;
+  color: $darkblue;
   font-family: inherit;
   font-size: 1.6rem;
-  padding-left: 137px;
+  padding-left: 15px;
+
+  &:hover {
+    color: $blue;
+  }
 
 
 }

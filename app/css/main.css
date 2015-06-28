@@ -33,8 +33,7 @@ input, button {
 
 .container {
   width: 100%;
-  margin: auto;
-  margin-top: 43px; }
+  margin: auto; }
 
 a {
   text-decoration: none; }
@@ -94,13 +93,15 @@ header {
         margin: 0; }
 
 .instructions {
-  margin-top: 25px; }
+  margin-top: 15px; }
 
 .instructions h5 {
-  color: black;
+  color: #1a323e;
   font-family: inherit;
   font-size: 1.6rem;
-  padding-left: 137px; }
+  padding-left: 15px; }
+  .instructions h5:hover {
+    color: #1b729f; }
 
 /* MAIN PAGE
 ----------- */
