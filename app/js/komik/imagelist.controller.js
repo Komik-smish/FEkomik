@@ -179,8 +179,140 @@
         $('#comic-strip-create').fadeIn(1000);
       };
 
+      //array which stores strip urls
+      $scope.storageArr = [];
+
+      $scope.addToStripCanvas = function(image_url) {
+
+        $('#strip-canvas').drawImage({
+          layer: true,
+          source: image_url,
+          draggable: true,
+          width: 275,
+          height: 300,
+          x: 200, y: 200,
+          autosave: true,
+          crossOrigin: 'anonymous'
+        });
+
+        $scope.storageArr.push(image_url);
+      };
+
+      $scope.addToStripCanvasSmall = function (assetUrl) {
+
+        $('#strip-canvas').drawImage({
+          layer: true,
+          source: assetUrl,
+          draggable: true,
+          bringToFront: true,
+          width: 50,
+          height: 50,
+          x: 200, y: 200,
+          crossOrigin: 'anonymous'
+        });
+      };
+
+      $scope.addToStripCanvasMedium = function (assetUrl) {
+
+        $('#strip-canvas').drawImage({
+          layer: true,
+          source: assetUrl,
+          draggable: true,
+          bringToFront: true,
+          width: 125,
+          height: 125,
+          x: 200, y: 200,
+          crossOrigin: 'anonymous'
+        });
+      };
+
+      $scope.addToStripCanvasLarge = function (assetUrl) {
+
+        $('#strip-canvas').drawImage({
+          layer: true,
+          source: assetUrl,
+          draggable: true,
+          bringToFront: true,
+          width: 200,
+          height: 200,
+          x: 200, y: 200,
+          crossOrigin: 'anonymous'
+        });
+      };
+
+      $scope.addToStripCanvasFlippedSmall = function (assetUrl) {
+
+        $('#strip-canvas').drawImage({
+          layer: true,
+          source: assetUrl,
+          draggable: true,
+          bringToFront: true,
+          width: 50,
+          height: 50,
+          scaleX: -1,
+          x: 200, y: 200,
+          crossOrigin: 'anonymous',
+          inverted: true
+        });
+      };
+
+      $scope.addToStripCanvasFlippedMedium = function (assetUrl) {
+
+        $('#strip-canvas').drawImage({
+          layer: true,
+          source: assetUrl,
+          draggable: true,
+          bringToFront: true,
+          width: 125,
+          height: 125,
+          scaleX:  -1,
+          x: 200, y: 200,
+          crossOrigin: 'anonymous',
+          inverted: true
+        });
+      };
+
+      $scope.addToStripCanvasFlippedLarge = function (assetUrl) {
+
+        $('#strip-canvas').drawImage({
+          layer: true,
+          source: assetUrl,
+          draggable: true,
+          bringToFront: true,
+          width: 200,
+          height: 200,
+          scaleX:  -1,
+          x: 200, y: 200,
+          crossOrigin: 'anonymous',
+          inverted: true
+        });
+      };
+
+      $scope.restoreStripCanvas = function() {
+
+        $('#strip-canvas').clearCanvas();
 
 
+          // $('#strip-canvas').drawImage({
+          //   layer: true,
+          //   source: $scope.storageArr[i],
+          //   draggable: true,
+          //   bringToFront: true,
+          //   width: 275,
+          //   height: 300,
+          //   x: (i + 200), y: 200,
+          //   crossOrigin: 'anonymous',
+          // });
+
+      };
+
+      $scope.downloadStrip = function () {
+        $('#strip-canvas').saveCanvas();
+        var image = $('#strip-canvas').getCanvasImage('png');
+        var a = $("<a>").attr("href", image).attr("download", "img.png").appendTo("body");
+        a[0].click();
+        a.remove();
+      };
     }]);
 
 }());

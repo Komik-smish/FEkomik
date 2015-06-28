@@ -88,7 +88,7 @@
   <div class="comic-strip-image-bar">
     <div class="image-bar-wrap">
       <div ng-repeat="i in imageList" class="strip-pics">
-        <a href="#/" ng-click="store(i.image_url)"><img id="chosen-image" ng-src="{{ i.image_url }}"></a>
+        <a href="#/" ng-click="addToStripCanvas(i.image_url)"><img id="chosen-image" ng-src="{{ i.image_url }}"></a>
       </div>
     </div>
   </div>
@@ -113,20 +113,20 @@
       <li class="row" ng-repeat="a in accessoryList">
 
         <div class="accessory-img">
-          <p class="flip" ng-click="addToCanvasFlippedSmall(a.accessory_url)"><i class="fa fa-arrows-h"></i></p>
-          <img ng-src="{{a.accessory_url}}" ng-click="addToCanvasSmall(a.accessory_url)">
+          <p class="flip" ng-click="addToStripCanvasFlippedSmall(a.accessory_url)"><i class="fa fa-arrows-h"></i></p>
+          <img ng-src="{{a.accessory_url}}" ng-click="addToStripCanvasSmall(a.accessory_url)">
           <!-- <p class="size">Small</p> -->
         </div>
 
         <div class="accessory-img">
-          <p class="flip" ng-click="addToCanvasFlippedMedium(a.accessory_url)"><i class="fa fa-arrows-h"></i></p>
-          <img ng-src="{{a.accessory_url}}" ng-click="addToCanvasMedium(a.accessory_url)">
+          <p class="flip" ng-click="addToStripCanvasFlippedMedium(a.accessory_url)"><i class="fa fa-arrows-h"></i></p>
+          <img ng-src="{{a.accessory_url}}" ng-click="addToStripCanvasMedium(a.accessory_url)">
           <!-- <p class="size">Medium</p> -->
         </div>
 
         <div class="accessory-img">
-          <p class="flip" ng-click="addToCanvasFlippedLarge(a.accessory_url)"><i class="fa fa-arrows-h"></i></p>
-          <img ng-src="{{a.accessory_url}}" ng-click="addToCanvasLarge(a.accessory_url)">
+          <p class="flip" ng-click="addToStripCanvasFlippedLarge(a.accessory_url)"><i class="fa fa-arrows-h"></i></p>
+          <img ng-src="{{a.accessory_url}}" ng-click="addToStripCanvasLarge(a.accessory_url)">
           <!-- <p class="size">Large</p> -->
         </div>
 
@@ -139,12 +139,12 @@
     <div class="rightside">
       <div class="strip-canvas-wrap">
 
-          <canvas id="strip-canvas" width='800' height='200' style="background-color:red;"></canvas>
+          <canvas id="strip-canvas" width='825' height='300' style=""></canvas>
 
       </div>
       <div class="toon-buttons">
-        <button ng-click="download()">Download Image</button>
-        <button class="reset-btn" ng-click="restoreImageCanvas()">Reset Toon</button>
+        <button ng-click="downloadStrip()">Download Image</button>
+        <button class="reset-btn" ng-click="restoreStripCanvas()">Reset Toon</button>
       </div>
       <div class="text-form">
         <p>Add some words:</p>
