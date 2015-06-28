@@ -99,7 +99,8 @@ header {
   color: #1a323e;
   font-family: inherit;
   font-size: 1.6rem;
-  padding-left: 15px; }
+  padding-left: 140px;
+  margin-bottom: 0; }
   .instructions h5:hover {
     color: #1b729f; }
 
