@@ -3,25 +3,33 @@
   'use strict';
 
   angular.module('Komik')
-    .controller('ImageList', ['$scope', 'ImageService', '$http', 'HEROKU',
+    .controller('ImageList', ['$scope', 'ImageService', '$http', 'HEROKU', '$filter',
 
-    function ($scope, ImageService, $http, HEROKU) {
+    function ($scope, ImageService, $http, HEROKU, $filter) {
 
       $scope.storage = [];
 
+      var orderBy = $filter('orderBy');
+
+
       ImageService.getAll().success(function(data) {
         $scope.imageList = data;
+
+        $scope.imageList = _.filter($scope.imageList, function (img) {
+          return img.ios !== 1;
+        });
+
       });
 
       ImageService.getAccessories().success( function (data) {
-        $scope.accessoryList = data.accessories;
+        $scope.accessoryList = data;
       });
 
 
       $scope.store = function (image_url) {
 
-        $('#all-pix').fadeOut();
-        $('#single-pix').fadeIn();
+        $('#all-pix').slideUp(500);
+        $('#single-pix').fadeIn(1000);
 
         $('canvas').drawImage({
           layer: true,
@@ -33,7 +41,7 @@
           crossOrigin: 'anonymous'
         });
 
-        $('canvas').saveCanvas();
+        $scope.storage = image_url;
       };
 
       $scope.addToCanvasSmall = function (assetUrl) {
@@ -85,10 +93,12 @@
           source: assetUrl,
           draggable: true,
           bringToFront: true,
-          width: -50,
+          width: 50,
           height: 50,
+          scaleX: -1,
           x: 200, y: 200,
-          crossOrigin: 'anonymous'
+          crossOrigin: 'anonymous',
+          inverted: true
         });
       };
 
@@ -99,10 +109,12 @@
           source: assetUrl,
           draggable: true,
           bringToFront: true,
-          width: -125,
+          width: 125,
           height: 125,
+          scaleX:  -1,
           x: 200, y: 200,
-          crossOrigin: 'anonymous'
+          crossOrigin: 'anonymous',
+          inverted: true
         });
       };
 
@@ -113,19 +125,19 @@
           source: assetUrl,
           draggable: true,
           bringToFront: true,
-          width: -200,
+          width: 200,
           height: 200,
+          scaleX:  -1,
           x: 200, y: 200,
-          crossOrigin: 'anonymous'
+          crossOrigin: 'anonymous',
+          inverted: true
         });
       };
 
       $scope.download = function () {
         $('canvas').saveCanvas();
         var image = $('canvas').getCanvasImage('png');
-
         var a = $("<a>").attr("href", image).attr("download", "img.png").appendTo("body");
-
         a[0].click();
         a.remove();
       };
@@ -138,12 +150,28 @@
           strokeStyle: '#25a',
           strokeWidth: 0,
           x: 150, y: 100,
-          fontSize: 36,
+          fontSize: 28,
           fontFamily: 'Bangers, cursive',
           text: inputText
         });
       };
 
+      $scope.reload = function () {
+        window.location.reload();
+      };
+
+      $scope.restoreImageCanvas = function() {
+        $('canvas').clearCanvas();
+        $('canvas').drawImage({
+          layer: true,
+          source: $scope.storage,
+          width: 400,
+          height: 400,
+          x: 200, y: 200,
+          autosave: true,
+          crossOrigin: 'anonymous'
+        });
+      };
 
     }]);
 

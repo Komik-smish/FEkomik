@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project Name</title>
+  <title>KOMIK!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="http://fonts.googleapis.com/css?family=Fugaz+One|Bangers" rel="stylesheet" type="text/css">
@@ -9,12 +9,14 @@
 
   <link rel="stylesheet" href="css/vendor/normalize.css">
   <link rel="stylesheet" href="css/vendor/foundation.css">
+  <link rel="stylesheet" href="css/vendor/font-awesome.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body ng-app="Komik">
 
 <header>
   <div class="innerheader">
+<<<<<<< HEAD
 
     <div class="instructions">
  <a href="#/instructions"><h5>INSTRUCTIONS</h5></a>
@@ -28,6 +30,13 @@
     <div class="logo"><a href="#/">2NR</a></div>
     <nav></nav>
 
+=======
+    <div class="logo" ng-controller="ImageList" ng-click="reload()"><p>KOMIK!</p></div>
+    <nav ng-controller="ImageList">
+      <p ng-click="show-strip">Create Comic Strip</p>
+      <p ng-click="reload()">home</p>
+    </nav>
+>>>>>>> dev
   </div>
 
 </header>

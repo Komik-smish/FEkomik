@@ -4,7 +4,7 @@
 
   angular.module('Komik', ['ngRoute']).constant('HEROKU', {
 
-    URL: 'http://salty-peak-7300.herokuapp.com/',
+    URL: 'http://salty-peak-7300.herokuapp.com',
     CONFIG: {
       // headers: {
       // 'X-Parse-Application-Id': 'RiQBNnq9Zct2WTY7fCRA7EYr5euAisXXb0UWYy5E',
@@ -34,6 +34,8 @@
       templateUrl: 'js/komik/instructions.tpl.html'
 
     });
+
+
 
   }]);
 
