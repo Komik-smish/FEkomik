@@ -14,11 +14,14 @@
 
       ImageService.getAll().success(function(data) {
         $scope.imageList = data;
-
         $scope.imageList = _.filter($scope.imageList, function (img) {
           return img.ios !== 1;
         });
 
+        $scope.iosList = data;
+        $scope.iosList = _.filter($scope.iosList, function (img) {
+          return img.ios === 1;
+        });
       });
 
       ImageService.getAccessories().success( function (data) {
@@ -172,6 +175,16 @@
           crossOrigin: 'anonymous'
         });
       };
+
+      $scope.playsound = function () {
+        var roar = $('video')[0];
+        roar.play();
+      };
+
+      $scope.playFile = function () {
+        $('.roar-audio').Play();
+      };
+
 
     }]);
 

@@ -76,6 +76,10 @@ header {
   header .innerheader {
     width: 80%;
     margin: auto; }
+    header .innerheader p {
+      text-shadow: 0.5px 0.4px 0px white; }
+    header .innerheader a {
+      text-shadow: 0.5px 0.4px 0px white; }
     header .innerheader .logo {
       overflow: hidden;
       display: inline-block;
@@ -176,63 +180,78 @@ header {
 
 /* ADD IMAGE TPL
 ---------- */
-.text-center {
-  padding-bottom: 215px;
-  padding-top: 67px; }
-
-.imageform {
-  margin-left: 230px;
-  margin-right: 230px; }
-  .imageform .rightside {
-    overflow: hidden;
+.rightside {
+  overflow: hidden;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  .rightside:last-child {
+    margin-right: 0; }
+  .rightside p {
+    font-size: 2.5em;
+    margin-bottom: 0;
+    color: #f23c27;
+    display: inline-block;
     float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 65.88078%; }
-    .imageform .rightside:last-child {
-      margin-right: 0; }
-    .imageform .rightside p {
-      font-size: 2.5em;
-      margin-bottom: 0;
-      color: #f23c27;
-      display: inline-block;
-      float: left;
-      margin-right: 1em; }
-    .imageform .rightside .text-form {
-      overflow: hidden;
-      clear: both; }
-    .imageform .rightside .toon-buttons {
-      margin-right: 1em;
-      width: 38%;
-      margin: auto; }
-      .imageform .rightside .toon-buttons .reset-btn {
-        background-color: #f23c27;
-        border: 1px solid #f23c27; }
-        .imageform .rightside .toon-buttons .reset-btn:hover {
-          background-color: #902724;
-          border: 1px solid #902724; }
-    .imageform .rightside form {
-      display: inline-block;
-      width: 70%;
-      float: left; }
-      .imageform .rightside form input {
-        display: inline-block;
-        width: 75%;
-        font-family: "Questrial", sans-serif; }
-      .imageform .rightside form button {
-        display: inline-block;
-        margin-left: 1em; }
-  .imageform .canvas {
+    margin-right: 1em; }
+  .rightside .text-form {
     overflow: hidden;
-    width: 60%;
+    clear: both; }
+  .rightside .toon-buttons {
+    margin-right: 1em;
+    width: 38%;
     margin: auto; }
+    .rightside .toon-buttons .reset-btn {
+      background-color: #f23c27;
+      border: 1px solid #f23c27; }
+      .rightside .toon-buttons .reset-btn:hover {
+        background-color: #902724;
+        border: 1px solid #902724; }
+  .rightside form {
+    display: inline-block;
+    width: 70%;
+    float: left; }
+    .rightside form input {
+      display: inline-block;
+      width: 75%;
+      font-family: "Questrial", sans-serif; }
+    .rightside form button {
+      display: inline-block;
+      margin-left: 1em; }
+
+.canvas {
+  overflow: hidden;
+  width: 60%;
+  margin: auto; }
+
+/* ADD IMAGE PAGE
+----------------- */
+.addimage-page {
+  background-color: #1a323e;
+  height: 100vh; }
+  .addimage-page form {
+    width: 60%;
+    margin: auto;
+    border: 1px solid #f7d281;
+    padding: 2em;
+    border-radius: 4px; }
+    .addimage-page form h2 {
+      color: #f7d281;
+      font-family: "Bangers", cursive; }
+    .addimage-page form button {
+      background-color: #1b729f;
+      margin: auto; }
 
 /* INSTRUCTIONS TPL
 ---------- */
 .I-page {
   margin-top: 30px;
   margin-left: 131px; }
+  .I-page ol {
+    margin-left: 1.4rem;
+    font-size: 1.2rem; }
 
-ol {
-  margin-left: 1.4rem;
-  font-size: 1.2rem; }
+.form-wrapper {
+  overflow: hidden;
+  padding-top: 10em; }

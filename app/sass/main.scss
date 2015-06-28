@@ -112,6 +112,14 @@ header {
     width: 80%;
     margin: auto;
 
+    p {
+      text-shadow: .5px .4px 0px white;
+    }
+
+    a {
+      text-shadow: .5px .4px 0px white;
+    }
+
     .logo {
       overflow: hidden;
       display: inline-block;
@@ -254,15 +262,15 @@ header {
 /* ADD IMAGE TPL
 ---------- */
 
-.text-center {
-  padding-bottom: 215px;
-  padding-top: 67px
+// .text-center {
+//   padding-bottom: 215px;
+//   padding-top: 67px
 
-}
+// }
 
-.imageform {
-  margin-left: 230px;
-  margin-right: 230px;
+// .imageform {
+//   margin-left: 230px;
+//   margin-right: 230px;
 
   .rightside {
     overflow: hidden;
@@ -328,8 +336,32 @@ header {
     margin: auto;
   }
 
-  .assets {
 
+
+
+/* ADD IMAGE PAGE
+----------------- */
+
+.addimage-page {
+  background-color: $darkblue;
+  height: 100vh;
+
+  form {
+    width: 60%;
+    margin: auto;
+    border: 1px solid $yellow;
+    padding: 2em;
+    border-radius: 4px;
+
+    h2 {
+      color: $yellow;
+      font-family: $bangers;
+    }
+
+    button {
+      background-color: $blue;
+      margin: auto;
+    }
   }
 
 }
@@ -340,10 +372,14 @@ header {
 .I-page {
   margin-top: 30px;
   margin-left: 131px;
+  ol {
+    margin-left: 1.4rem;
+    font-size: 1.2rem;
+  }
 }
 
-ol {
-  margin-left: 1.4rem;
-  font-size: 1.2rem;
-}
+  .form-wrapper {
+    overflow: hidden;
+    padding-top: 10em;
+  }
 
