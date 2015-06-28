@@ -61,10 +61,7 @@ button {
 header {
   background-color: #1a323e;
   width: 100%;
-  height: 80px; }
-  header a {
-    color: #f23c27;
-    text-shadow: 3px 1px 0px white; }
+  height: 90px; }
   header nav {
     display: inline-block;
     float: right;
@@ -72,7 +69,9 @@ header {
     margin-top: 1em; }
     header nav p {
       margin-top: 1em;
-      cursor: pointer; }
+      cursor: pointer;
+      display: inline-block;
+      margin-left: 1em; }
   header .innerheader {
     width: 80%;
     margin: auto; }
@@ -81,7 +80,13 @@ header {
       display: inline-block;
       font-size: 6em;
       font-family: "Bangers", cursive;
-      width: 5em; }
+      width: 5em;
+      cursor: pointer; }
+      header .innerheader .logo p {
+        color: #f23c27;
+        font-size: 1em;
+        text-shadow: 3px 1px 0px white;
+        margin: 0; }
 
 /* MAIN PAGE
 ----------- */
@@ -112,9 +117,42 @@ header {
     width: 31.76157%;
     height: 100vh;
     border: 1px solid #EDEEEE;
-    background-color: white; }
+    background-color: white;
+    overflow: scroll; }
     .create aside:last-child {
       margin-right: 0; }
+    .create aside .accessory-img {
+      width: 75px;
+      height: 75px;
+      display: inline-block; }
+      .create aside .accessory-img img {
+        height: 75px;
+        display: inline-block; }
+    .create aside .accessory-ul {
+      overflow: hidden;
+      padding: 0 2em 2em 2em;
+      font-family: "Questrial", sans-serif; }
+      .create aside .accessory-ul li {
+        overflow: hidden; }
+      .create aside .accessory-ul .flip-img {
+        text-align: center; }
+      .create aside .accessory-ul .row {
+        border-bottom: 1px solid #EDEEEE;
+        padding-bottom: 1em; }
+    .create aside .size {
+      color: #1a323e;
+      font-size: 0.75em;
+      text-align: center;
+      display: inline-block;
+      margin-right: 3em; }
+    .create aside .sizeL {
+      margin-right: 0; }
+    .create aside .flip {
+      color: #1A323D;
+      font-size: 0.75em;
+      cursor: pointer;
+      margin-bottom: 0;
+      text-align: center; }
     .create aside h4 {
       color: #1b729f;
       padding: 1em;
@@ -139,6 +177,19 @@ header {
       display: inline-block;
       float: left;
       margin-right: 1em; }
+    .create .rightside .text-form {
+      overflow: hidden;
+      clear: both; }
+    .create .rightside .toon-buttons {
+      margin-right: 1em;
+      width: 38%;
+      margin: auto; }
+      .create .rightside .toon-buttons .reset-btn {
+        background-color: #f23c27;
+        border: 1px solid #f23c27; }
+        .create .rightside .toon-buttons .reset-btn:hover {
+          background-color: #902724;
+          border: 1px solid #902724; }
     .create .rightside form {
       display: inline-block;
       width: 70%;

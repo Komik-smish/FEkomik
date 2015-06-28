@@ -46,7 +46,7 @@
           width: 50,
           height: 50,
           x: 200, y: 200,
-          // crossOrigin: 'anonymous'
+          crossOrigin: 'anonymous'
         });
       };
 
@@ -60,7 +60,7 @@
           width: 125,
           height: 125,
           x: 200, y: 200,
-          // crossOrigin: 'anonymous'
+          crossOrigin: 'anonymous'
         });
       };
 

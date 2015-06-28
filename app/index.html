@@ -9,15 +9,19 @@
 
   <link rel="stylesheet" href="css/vendor/normalize.css">
   <link rel="stylesheet" href="css/vendor/foundation.css">
+  <link rel="stylesheet" href="css/vendor/font-awesome.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body ng-app="Komik">
 
 <header>
   <div class="innerheader">
-    <div class="logo"><a href="#/">2NR</a></div>
+
+    <div class="logo" ng-click="reload()"><p>KOMIK!</p></div>
     <nav ng-controller="ImageList">
-      <p ng-click="showStrip()">Create Comic Strip</p>
+      <p ng-click="show-strip">Create Comic Strip</p>
+      <p ng-click="reload()">home</p>
+
     </nav>
   </div>
 </header>
