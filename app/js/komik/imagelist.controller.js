@@ -23,7 +23,7 @@
         $('#all-pix').slideUp(500);
         $('#single-pix').fadeIn(1000);
 
-        $('canvas').drawImage({
+        $('#canvas').drawImage({
           layer: true,
           source: image_url,
           width: 400,
@@ -38,7 +38,7 @@
 
       $scope.addToCanvasSmall = function (assetUrl) {
 
-        $('canvas').drawImage({
+        $('#canvas').drawImage({
           layer: true,
           source: assetUrl,
           draggable: true,
@@ -52,7 +52,7 @@
 
       $scope.addToCanvasMedium = function (assetUrl) {
 
-        $('canvas').drawImage({
+        $('#canvas').drawImage({
           layer: true,
           source: assetUrl,
           draggable: true,
@@ -66,7 +66,7 @@
 
       $scope.addToCanvasLarge = function (assetUrl) {
 
-        $('canvas').drawImage({
+        $('#canvas').drawImage({
           layer: true,
           source: assetUrl,
           draggable: true,
@@ -80,7 +80,7 @@
 
       $scope.addToCanvasFlippedSmall = function (assetUrl) {
 
-        $('canvas').drawImage({
+        $('#canvas').drawImage({
           layer: true,
           source: assetUrl,
           draggable: true,
@@ -96,7 +96,7 @@
 
       $scope.addToCanvasFlippedMedium = function (assetUrl) {
 
-        $('canvas').drawImage({
+        $('#canvas').drawImage({
           layer: true,
           source: assetUrl,
           draggable: true,
@@ -112,7 +112,7 @@
 
       $scope.addToCanvasFlippedLarge = function (assetUrl) {
 
-        $('canvas').drawImage({
+        $('#canvas').drawImage({
           layer: true,
           source: assetUrl,
           draggable: true,
@@ -127,7 +127,7 @@
       };
 
       $scope.download = function () {
-        $('canvas').saveCanvas();
+        $('#canvas').saveCanvas();
         var image = $('canvas').getCanvasImage('png');
         var a = $("<a>").attr("href", image).attr("download", "img.png").appendTo("body");
         a[0].click();
@@ -136,7 +136,7 @@
 
       $scope.addText = function (inputText) {
         console.log(inputText);
-        $('canvas').drawText({
+        $('#canvas').drawText({
           fillStyle: '#f23c27',
           draggable: true,
           strokeStyle: '#25a',
@@ -153,8 +153,8 @@
       };
 
       $scope.restoreImageCanvas = function() {
-        $('canvas').clearCanvas();
-        $('canvas').drawImage({
+        $('#canvas').clearCanvas();
+        $('#canvas').drawImage({
           layer: true,
           source: $scope.storage,
           width: 400,
@@ -163,6 +163,12 @@
           autosave: true,
           crossOrigin: 'anonymous'
         });
+      };
+
+      $scope.showStrip = function() {
+        $('#all-pix').slideUp(500);
+        $('#single-pix').slideUp(500);
+        $('#comic-strip-create').fadeIn(1000);
       };
 
     }]);
