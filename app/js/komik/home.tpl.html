@@ -59,6 +59,13 @@
       <div class="canvas">
         <canvas width='400' height='450'></canvas>
       </div>
+
+
+      <p onclick="document.getElementById('roar').play()">RAWRRRR!</p>
+      <audio id="roar" class="roar-audio hide" src="audio/t_rex.mp3" preload="auto" controls></audio>
+
+
+
       <div class="toon-buttons">
         <button ng-click="download()">Download Image</button>
         <button class="reset-btn" ng-click="restoreImageCanvas()">Reset Toon</button>
@@ -69,7 +76,6 @@
           <label>
             <textarea placeholder="Enter textfor your comic" ng-model="imageList.text"></textarea>
           </label>
-          <!-- <input type="text" ng-model="imageList.text"> -->
           <button>Add Text</button>
         </form>
       </div>

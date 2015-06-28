@@ -110,6 +110,14 @@ header {
     width: 80%;
     margin: auto;
 
+    p {
+      text-shadow: .5px .4px 0px white;
+    }
+
+    a {
+      text-shadow: .5px .4px 0px white;
+    }
+
     .logo {
       overflow: hidden;
       display: inline-block;
@@ -296,8 +304,36 @@ header {
     margin: auto;
   }
 
-  .assets {
-
-  }
 }
 
+
+/* ADD IMAGE PAGE
+----------------- */
+
+.addimage-page {
+  background-color: $darkblue;
+  height: 100vh;
+
+  form {
+    width: 60%;
+    margin: auto;
+    border: 1px solid $yellow;
+    padding: 2em;
+    border-radius: 4px;
+
+    h2 {
+      color: $yellow;
+      font-family: $bangers;
+    }
+
+    button {
+      background-color: $blue;
+      margin: auto;
+    }
+  }
+
+  .form-wrapper {
+    overflow: hidden;
+    padding-top: 10em;
+  }
+}

@@ -16,10 +16,12 @@
 
 <header>
   <div class="innerheader">
-    <div class="logo" ng-controller="ImageList" ng-click="reload()"><p>KOMIK!</p></div>
+    <a href="#/"><div class="logo" ng-controller="ImageList" ng-click="reload()"><p>KOMIK!</p></div></a>
     <nav ng-controller="ImageList">
-      <p ng-click="show-strip">Create Comic Strip</p>
-      <p ng-click="reload()">home</p>
+      <p><a href="#/komiks">See Komiks</a></p>
+      <a href="#/"><p ng-click="show-strip">Create Komik Strip</p></a>
+      <a href="#/addimage"><p>Add Image</p></a>
+      <a href="#/"><p ng-click="reload()">Home</p></a>
     </nav>
   </div>
 </header>
