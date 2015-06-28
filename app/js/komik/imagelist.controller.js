@@ -320,7 +320,7 @@
           layer: true,
           text: inputText
         });
-        $scope.imageList.text = '';
+        $scope.imageList.striptext = '';
       };
 
       $scope.playsound = function () {
