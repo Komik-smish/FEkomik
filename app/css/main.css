@@ -71,7 +71,8 @@ header {
       margin-top: 1em;
       cursor: pointer;
       display: inline-block;
-      margin-left: 1em; }
+      margin-left: 1em;
+      font-size: 2em; }
   header .innerheader {
     width: 80%;
     margin: auto; }

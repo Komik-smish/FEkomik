@@ -157,6 +157,7 @@
           fontFamily: 'Bangers, cursive',
           text: inputText
         });
+        $scope.imageList.text = '';
       };
 
       $scope.reload = function () {
@@ -319,6 +320,7 @@
           layer: true,
           text: inputText
         });
+        $scope.imageList.text = '';
       };
 
       $scope.playsound = function () {
