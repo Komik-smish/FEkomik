@@ -95,9 +95,10 @@
       <div class="text-form">
         <p>Add some words:</p>
         <form class="addtext-form" ng-click="addText(imageList.text)">
-          <label>
+        <input type="text" ng-model="imageList.text" placeholder="Enter text here">
+<!--           <label>
             <textarea placeholder="Enter text for your komik" ng-model="imageList.text"></textarea>
-          </label>
+          </label> -->
           <button>Add Text</button>
         </form>
       </div>
