@@ -95,10 +95,7 @@
       <div class="text-form">
         <p>Add some words:</p>
         <form class="addtext-form" ng-click="addText(imageList.text)">
-        <input type="text" ng-model="imageList.text" placeholder="Enter text here">
-<!--           <label>
-            <textarea placeholder="Enter text for your komik" ng-model="imageList.text"></textarea>
-          </label> -->
+          <input type="text" ng-model="imageList.text" placeholder="Enter text here">
           <button>Add Text</button>
         </form>
       </div>
@@ -140,19 +137,19 @@
 
       <li class="row" ng-repeat="a in accessoryList">
 
-        <div class="accessory-img">
+        <div class="accessory-img small-accessory">
           <p class="flip" ng-click="addToStripCanvasFlippedSmall(a.accessory_url)"><i class="fa fa-arrows-h"></i></p>
           <img ng-src="{{a.accessory_url}}" ng-click="addToStripCanvasSmall(a.accessory_url)">
           <!-- <p class="size">Small</p> -->
         </div>
 
-        <div class="accessory-img">
+        <div class="accessory-img medium-accessory">
           <p class="flip" ng-click="addToStripCanvasFlippedMedium(a.accessory_url)"><i class="fa fa-arrows-h"></i></p>
           <img ng-src="{{a.accessory_url}}" ng-click="addToStripCanvasMedium(a.accessory_url)">
           <!-- <p class="size">Medium</p> -->
         </div>
 
-        <div class="accessory-img">
+        <div class="accessory-img large-accessory">
           <p class="flip" ng-click="addToStripCanvasFlippedLarge(a.accessory_url)"><i class="fa fa-arrows-h"></i></p>
           <img ng-src="{{a.accessory_url}}" ng-click="addToStripCanvasLarge(a.accessory_url)">
           <!-- <p class="size">Large</p> -->
