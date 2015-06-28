@@ -306,6 +306,21 @@
         a.remove();
       };
 
+
+      $scope.addTextToStrip = function (inputText) {
+        $('#strip-canvas').drawText({
+          fillStyle: '#f23c27',
+          draggable: true,
+          strokeStyle: '#25a',
+          strokeWidth: 0,
+          x: 150, y: 100,
+          fontSize: 28,
+          fontFamily: 'Bangers, cursive',
+          layer: true,
+          text: inputText
+        });
+      };
+
       $scope.playsound = function () {
         var roar = $('video')[0];
         roar.play();
