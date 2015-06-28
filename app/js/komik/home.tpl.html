@@ -29,7 +29,7 @@
         <p class="size">Medium <i class="fa fa-angle-down"></i></p>
         <p class="size sizeL">Large <i class="fa fa-angle-down"></i></p>
 
-        <li class="row" ng-repeat="a in accessoryList">
+        <li class="row" ng-repeat="a in accessoryList | orderBy:'-accessory_type'">
 
           <div class="accessory-img">
             <p class="flip" ng-click="addToCanvasFlippedSmall(a.accessory_url)"><i class="fa fa-arrows-h"></i></p>
@@ -67,7 +67,10 @@
       <div class="text-form">
         <p>Add some words:</p>
         <form class="addtext-form" ng-click="addText(imageList.text)">
-          <input type="text" ng-model="imageList.text">
+          <label>
+            <textarea placeholder="Enter textfor your comic" ng-model="imageList.text"></textarea>
+          </label>
+          <!-- <input type="text" ng-model="imageList.text"> -->
           <button>Add Text</button>
         </form>
       </div>

@@ -3,14 +3,22 @@
   'use strict';
 
   angular.module('Komik')
-    .controller('ImageList', ['$scope', 'ImageService', '$http', 'HEROKU',
+    .controller('ImageList', ['$scope', 'ImageService', '$http', 'HEROKU', '$filter',
 
-    function ($scope, ImageService, $http, HEROKU) {
+    function ($scope, ImageService, $http, HEROKU, $filter) {
 
       $scope.storage = [];
 
+      var orderBy = $filter('orderBy');
+
+
       ImageService.getAll().success(function(data) {
         $scope.imageList = data;
+
+        $scope.imageList = _.filter($scope.imageList, function (img) {
+          return img.ios !== 1;
+        });
+
       });
 
       ImageService.getAccessories().success( function (data) {
@@ -74,7 +82,7 @@
           width: 200,
           height: 200,
           x: 200, y: 200,
-          // crossOrigin: 'anonymous'
+          crossOrigin: 'anonymous'
         });
       };
 
@@ -142,7 +150,7 @@
           strokeStyle: '#25a',
           strokeWidth: 0,
           x: 150, y: 100,
-          fontSize: 36,
+          fontSize: 28,
           fontFamily: 'Bangers, cursive',
           text: inputText
         });
