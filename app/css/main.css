@@ -90,9 +90,13 @@ header {
         margin: 0; }
 
 .instructions {
-  display: inline-block;
-  float: right;
   margin-top: 25px; }
+
+.instructions h5 {
+  color: black;
+  font-family: inherit;
+  font-size: 1.6rem;
+  padding-left: 137px; }
 
 /* MAIN PAGE
 ----------- */
@@ -226,5 +230,9 @@ header {
 /* INSTRUCTIONS TPL
 ---------- */
 .I-page {
-  margin-left: 260px;
-  margin-top: 90px; }
+  margin-top: 30px;
+  margin-left: 131px; }
+
+ol {
+  margin-left: 1.4rem;
+  font-size: 1.2rem; }
