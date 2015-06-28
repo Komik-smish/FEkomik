@@ -33,8 +33,7 @@ input, button {
 
 .container {
   width: 100%;
-  margin: auto;
-  margin-top: 43px; }
+  margin: auto; }
 
 a {
   text-decoration: none; }
@@ -94,13 +93,16 @@ header {
         margin: 0; }
 
 .instructions {
-  margin-top: 25px; }
+  margin-top: 15px; }
 
 .instructions h5 {
-  color: black;
+  color: #1a323e;
   font-family: inherit;
   font-size: 1.6rem;
-  padding-left: 137px; }
+  padding-left: 140px;
+  margin-bottom: 0; }
+  .instructions h5:hover {
+    color: #1b729f; }
 
 /* MAIN PAGE
 ----------- */
@@ -108,6 +110,8 @@ header {
   margin-top: 2em;
   width: 100%;
   overflow: hidden; }
+  .home ul li img {
+    border-radius: 4px; }
 
 .singlepix {
   height: 800px;
@@ -266,14 +270,14 @@ header {
   display: block;
   width: 100%;
   height: 146px;
-  border: solid 1px black;
-  border-radius: 4px;
+  border: 1px solid #EDEEEE;
   padding: 8px 1px 1px 1px;
   overflow-x: scroll;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  background-color: white; }
 
 .image-bar-wrap {
-  width: 3000px;
+  width: 2000px;
   height: 146px;
   margin-bottom: 2em; }
 
@@ -282,6 +286,8 @@ header {
   width: 122px;
   height: 120px;
   margin: 0.2em 0.2em 0.2em 0.2em; }
+  .strip-pics img {
+    border-radius: 4px; }
 
 .strip-list {
   padding: 0;
@@ -289,13 +295,16 @@ header {
   height: 146px; }
 
 .strip-wrap {
-  border: solid 1px black;
   border-radius: 4px;
   padding: 5px;
   overflow: hidden; }
 
 .strip-canvas-wrap {
-  width: 75%; }
+  overflow: hidden;
+  width: 90%;
+  border: 1px solid #1a323e;
+  background-color: white;
+  margin-bottom: 1em; }
 
 .strip-bottom {
   margin-top: 2em; }

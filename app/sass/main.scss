@@ -60,7 +60,6 @@ input, button {
 .container {
   width: 100%;
   margin: auto;
-  margin-top: 43px;
 }
 
 a {
@@ -139,14 +138,19 @@ header {
 }
 
 .instructions {
-   margin-top: 25px;
+   margin-top: 15px;
 }
 
 .instructions h5 {
-  color: black;
+  color: $darkblue;
   font-family: inherit;
   font-size: 1.6rem;
-  padding-left: 137px;
+  padding-left: 140px;
+  margin-bottom: 0;
+
+  &:hover {
+    color: $blue;
+  }
 
 
 }
@@ -162,6 +166,10 @@ header {
   ul {
 
     li {
+
+      img {
+        border-radius: 4px;
+      }
 
     }
   }
@@ -396,15 +404,16 @@ header {
   display:block;
   width: 100%;
   height: 146px;
-  border: solid 1px black;
-  border-radius: 4px;
+  border: 1px solid #EDEEEE;
+  // border-radius: 4px;
   padding: 8px 1px 1px 1px;
   overflow-x: scroll;
   overflow-y: hidden;
+  background-color: white;
 }
 
 .image-bar-wrap {
-  width: 3000px;
+  width: 2000px;
   height:146px;
   margin-bottom: 2em;
 }
@@ -414,6 +423,13 @@ header {
   width: 122px;
   height: 120px;
   margin: 0.2em 0.2em 0.2em 0.2em;
+
+  img {
+    border-radius: 4px;
+  }
+}
+
+.strip-canvas {
 }
 
 .strip-list {
@@ -423,14 +439,18 @@ header {
 }
 
 .strip-wrap {
-  border: solid 1px black;
+  // border: solid 1px black;
   border-radius: 4px;
   padding: 5px;
   overflow: hidden;
 }
 
 .strip-canvas-wrap {
-  width: 75%;
+  overflow: hidden;
+  width: 90%;
+  border: 1px solid $darkblue;
+  background-color: white;
+  margin-bottom: 1em;
 }
 
 .strip-bottom {
