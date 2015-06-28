@@ -294,19 +294,7 @@
 
       $scope.restoreStripCanvas = function() {
 
-        $('#strip-canvas').clearCanvas();
-
-
-          // $('#strip-canvas').drawImage({
-          //   layer: true,
-          //   source: $scope.storageArr[i],
-          //   draggable: true,
-          //   bringToFront: true,
-          //   width: 275,
-          //   height: 300,
-          //   x: (i + 200), y: 200,
-          //   crossOrigin: 'anonymous',
-          // });
+        $('#strip-canvas').clearCanvas().clearCanvas();
 
       };
 
