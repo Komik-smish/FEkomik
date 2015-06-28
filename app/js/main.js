@@ -33,12 +33,11 @@
 
     .when('/instructions', {
       templateUrl: 'js/komik/instructions.tpl.html'
-
+    })
 
     .when('/komiks', {
       controller: 'ImageList',
       templateUrl: 'js/komik/komiks.tpl.html'
-
     });
 
 
