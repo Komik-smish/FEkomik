@@ -261,6 +261,47 @@ header {
     margin-left: 1.4rem;
     font-size: 1.2rem; }
 
+.comic-strip-create {
+  display: none; }
+
+.comic-strip-image-bar {
+  display: block;
+  width: 100%;
+  height: 146px;
+  border: solid 1px black;
+  border-radius: 4px;
+  padding: 8px 1px 1px 1px;
+  overflow-x: scroll;
+  overflow-y: hidden; }
+
+.image-bar-wrap {
+  width: 3000px;
+  height: 146px;
+  margin-bottom: 2em; }
+
+.strip-pics {
+  display: inline-block;
+  width: 122px;
+  height: 120px;
+  margin: 0.2em 0.2em 0.2em 0.2em; }
+
+.strip-list {
+  padding: 0;
+  margin: 0;
+  height: 146px; }
+
+.strip-wrap {
+  border: solid 1px black;
+  border-radius: 4px;
+  padding: 5px;
+  overflow: hidden; }
+
+.strip-canvas-wrap {
+  width: 75%; }
+
+.strip-bottom {
+  margin-top: 2em; }
+
 .form-wrapper {
   overflow: hidden;
   padding-top: 10em; }
