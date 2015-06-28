@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project Name</title>
+  <title>KOMIK!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="http://fonts.googleapis.com/css?family=Fugaz+One|Bangers" rel="stylesheet" type="text/css">
@@ -16,7 +16,7 @@
 
 <header>
   <div class="innerheader">
-    <div class="logo" ng-click="reload()"><p>KOMIK!</p></div>
+    <div class="logo" ng-controller="ImageList" ng-click="reload()"><p>KOMIK!</p></div>
     <nav ng-controller="ImageList">
       <p ng-click="show-strip">Create Comic Strip</p>
       <p ng-click="reload()">home</p>

@@ -30,6 +30,8 @@
       templateUrl: 'js/komik/addimage.tpl.html'
     });
 
+
+
   }]);
 
 
