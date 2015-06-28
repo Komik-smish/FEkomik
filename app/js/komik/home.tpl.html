@@ -56,7 +56,7 @@
  </aside>
 
     <div class="rightside">
-      <div class="canvas">
+      <div class="canvas ">
 
         <canvas id="canvas" width='400' height='450'></canvas>
       </div>
@@ -80,15 +80,77 @@
 
 </div>
 
-<div class = "comic-strip-create" id = "comic-strip-create" class="comic-strip-create">
+<div class = "comic-strip-create row create" id = "comic-strip-create" class="comic-strip-create">
 
-
-  <div ng-repeat="i in imageList" class="strip-pics">
-    <a href="#/" ng-click="store(i.image_url)"><img id="chosen-image" ng-src="{{ i.image_url }}"></a>
+  <div class="comic-strip-image-bar">
+    <div class="image-bar-wrap">
+      <div ng-repeat="i in imageList" class="strip-pics">
+        <a href="#/" ng-click="store(i.image_url)"><img id="chosen-image" ng-src="{{ i.image_url }}"></a>
+      </div>
+    </div>
   </div>
 
-  <div class="stripwrap row">
-    <canvas id="strip-canvas" class="strip-canvas" width="800" height="400" style="background-color:red"></canvas>
-  </div>
+  <div class = "strip-bottom">
+  <aside>
+    <div class="aside-top">
+      <h4>Accessories</h4>
+      <hr />
+    </div>
 
+  <div class="aside-bottom">
+
+    <ul class="accessory-ul">
+
+      <p class="flip-img">Click <i class="fa fa-arrows-h"></i> to get a flipped version of the accessory.</p>
+
+      <p class="size">Small <i class="fa fa-angle-down"></i></p>
+      <p class="size">Medium <i class="fa fa-angle-down"></i></p>
+      <p class="size sizeL">Large <i class="fa fa-angle-down"></i></p>
+
+      <li class="row" ng-repeat="a in accessoryList">
+
+        <div class="accessory-img">
+          <p class="flip" ng-click="addToCanvasFlippedSmall(a.accessory_url)"><i class="fa fa-arrows-h"></i></p>
+          <img ng-src="{{a.accessory_url}}" ng-click="addToCanvasSmall(a.accessory_url)">
+          <!-- <p class="size">Small</p> -->
+        </div>
+
+        <div class="accessory-img">
+          <p class="flip" ng-click="addToCanvasFlippedMedium(a.accessory_url)"><i class="fa fa-arrows-h"></i></p>
+          <img ng-src="{{a.accessory_url}}" ng-click="addToCanvasMedium(a.accessory_url)">
+          <!-- <p class="size">Medium</p> -->
+        </div>
+
+        <div class="accessory-img">
+          <p class="flip" ng-click="addToCanvasFlippedLarge(a.accessory_url)"><i class="fa fa-arrows-h"></i></p>
+          <img ng-src="{{a.accessory_url}}" ng-click="addToCanvasLarge(a.accessory_url)">
+          <!-- <p class="size">Large</p> -->
+        </div>
+
+      </li>
+    </ul>
+
+   </div>
+ </aside>
+
+    <div class="rightside">
+      <div class="strip-canvas-wrap">
+
+          <canvas id="strip-canvas" width='800' height='200' style="background-color:red;"></canvas>
+
+      </div>
+      <div class="toon-buttons">
+        <button ng-click="download()">Download Image</button>
+        <button class="reset-btn" ng-click="restoreImageCanvas()">Reset Toon</button>
+      </div>
+      <div class="text-form">
+        <p>Add some words:</p>
+        <form class="addtext-form" ng-click="addText(imageList.text)">
+          <input type="text" ng-model="imageList.text">
+          <button>Add Text</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
 </div>

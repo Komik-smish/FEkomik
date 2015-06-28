@@ -171,6 +171,8 @@
         $('#comic-strip-create').fadeIn(1000);
       };
 
+
+
     }]);
 
 }());
