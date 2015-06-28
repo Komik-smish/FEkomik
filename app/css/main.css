@@ -177,6 +177,14 @@ header {
       margin-bottom: 0;
       padding-bottom: 0;
       font-size: 3em; }
+  .create .audiooptions {
+    overflow: hidden;
+    font-size: .7em;
+    text-align: center;
+    margin-bottom: 1em; }
+    .create .audiooptions p {
+      text-align: center;
+      color: #1b729f; }
 
 /* ADD IMAGE TPL
 ---------- */
