@@ -76,6 +76,10 @@ header {
   header .innerheader {
     width: 80%;
     margin: auto; }
+    header .innerheader p {
+      text-shadow: 0.5px 0.4px 0px white; }
+    header .innerheader a {
+      text-shadow: 0.5px 0.4px 0px white; }
     header .innerheader .logo {
       overflow: hidden;
       display: inline-block;
@@ -227,6 +231,24 @@ header {
     width: 60%;
     margin: auto; }
 
+/* ADD IMAGE PAGE
+----------------- */
+.addimage-page {
+  background-color: #1a323e;
+  height: 100vh; }
+  .addimage-page form {
+    width: 60%;
+    margin: auto;
+    border: 1px solid #f7d281;
+    padding: 2em;
+    border-radius: 4px; }
+    .addimage-page form h2 {
+      color: #f7d281;
+      font-family: "Bangers", cursive; }
+    .addimage-page form button {
+      background-color: #1b729f;
+      margin: auto; }
+
 /* INSTRUCTIONS TPL
 ---------- */
 .I-page {
@@ -236,3 +258,7 @@ header {
 ol {
   margin-left: 1.4rem;
   font-size: 1.2rem; }
+
+.form-wrapper {
+  overflow: hidden;
+  padding-top: 10em; }

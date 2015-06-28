@@ -1,19 +1,26 @@
 
+
 <!DOCTYPE html>
 
 </html>
 
-<div>
-   <title>ADD IMAGE URL</title>
-</div>
 
-<div>
-   <div class="title-url">
-       <h1 class="text-center">Add Your Image Url</h1>
-   </div>
-   <form class="imageform" ng-submit="uploadImage(x)">
-       <input type="text" class="addimage" ng-model="x.image_url" placeholder="Add Image URL">
-       <button>Submit</button>
-   </form>
+<div class="addimage-page">
+
+  <div class="form-wrapper">
+
+    <div>
+       <form class="imageform" ng-submit="uploadImage(x)">
+          <div class="title-url">
+            <h2 class="text-center">Add Your Image Url</h2>
+          </div>
+          <input type="text" class="addimage" ng-model="x.image_url" placeholder="Add Image URL">
+          <button>Submit</button>
+       </form>
+    </div>
+
+  </div>
+
+
 </div>
 
