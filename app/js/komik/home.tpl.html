@@ -1,4 +1,7 @@
+
+
 <div class="row allpix" id="all-pix">
+
 
   <div class="home">
     <ul class="small-block-grid-3">
@@ -7,6 +10,7 @@
       </li>
     </ul>
   </div>
+
 
 </div>
 
@@ -61,21 +65,38 @@
         <canvas id="canvas" width='400' height='450'></canvas>
       </div>
 
-
-      <p onclick="document.getElementById('roar').play()">RAWRRRR!</p>
-      <audio id="roar" class="roar-audio hide" src="audio/t_rex.mp3" preload="auto" controls></audio>
-
-
-
       <div class="toon-buttons">
         <button ng-click="download()">Download Image</button>
         <button class="reset-btn" ng-click="restoreImageCanvas()">Reset Toon</button>
       </div>
+
+      <div class="audiooptions">
+
+        <p onclick="document.getElementById('roar').play()"><i class="fa fa-volume-up"></i> RAWRRRR!</p>
+        <audio id="roar" class="hide" src="audio/t_rex.mp3" preload="auto" controls></audio>
+
+        <p onclick="document.getElementById('meow').play()"><i class="fa fa-volume-up"></i> Meow</p>
+        <audio id="meow" class="hide" src="audio/cat-meow.mp3" preload="auto" controls></audio>
+
+        <p onclick="document.getElementById('chaching').play()"><i class="fa fa-volume-up"></i> Cha-Ching!</p>
+        <audio id="chaching" class="hide" src="audio/cha-ching.mp3" preload="auto" controls></audio>
+
+        <p onclick="document.getElementById('crowd').play()"><i class="fa fa-volume-up"></i> Applause</p>
+        <audio id="crowd" class="hide" src="audio/crowd-applause.mp3" preload="auto" controls></audio>
+
+        <p onclick="document.getElementById('evillaugh').play()"><i class="fa fa-volume-up"></i> Evil Man Laugh</p>
+        <audio id="evillaugh" class="hide" src="audio/evil-laugh.mp3" preload="auto" controls></audio>
+
+        <p onclick="document.getElementById('slap').play()"><i class="fa fa-volume-up"></i> Slap!</p>
+        <audio id="slap" class="hide" src="audio/slap.mp3" preload="auto" controls></audio>
+
+      </div>
+
       <div class="text-form">
         <p>Add some words:</p>
         <form class="addtext-form" ng-click="addText(imageList.text)">
           <label>
-            <textarea placeholder="Enter textfor your comic" ng-model="imageList.text"></textarea>
+            <textarea placeholder="Enter text for your komik" ng-model="imageList.text"></textarea>
           </label>
           <button>Add Text</button>
         </form>

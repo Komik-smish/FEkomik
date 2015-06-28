@@ -1,3 +1,4 @@
+
 @import "../css/vendor/bourbon/bourbon";
 @import "../css/vendor/neat/neat";
 
@@ -59,6 +60,7 @@ input, button {
 .container {
   width: 100%;
   margin: auto;
+  margin-top: 43px;
 }
 
 a {
@@ -136,6 +138,19 @@ header {
   }
 }
 
+.instructions {
+   margin-top: 25px;
+}
+
+.instructions h5 {
+  color: black;
+  font-family: inherit;
+  font-size: 1.6rem;
+  padding-left: 137px;
+
+
+}
+
 /* MAIN PAGE
 ----------- */
 
@@ -158,6 +173,7 @@ header {
   height: 800px;
   display: none;
 }
+
 
 /* CREATE PAGE
 -------------- */
@@ -242,6 +258,34 @@ header {
     }
   }
 
+  .audiooptions {
+    overflow: hidden;
+    font-size: .7em;
+    text-align: center;
+    margin-bottom: 1em;
+
+    p {
+      text-align: center;
+      color: $blue;
+    }
+  }
+
+}
+
+
+/* ADD IMAGE TPL
+---------- */
+
+// .text-center {
+//   padding-bottom: 215px;
+//   padding-top: 67px
+
+// }
+
+// .imageform {
+//   margin-left: 230px;
+//   margin-right: 230px;
+
   .rightside {
     overflow: hidden;
     @include span-columns(8);
@@ -298,14 +342,11 @@ header {
       }
     }
 
-  }
-
   .canvas {
     overflow: hidden;
     width: 60%;
     margin: auto;
   }
-
 }
 
 
@@ -333,6 +374,19 @@ header {
       margin: auto;
     }
   }
+}
+
+/* INSTRUCTIONS TPL
+---------- */
+
+.I-page {
+  margin-top: 30px;
+  margin-left: 131px;
+  ol {
+    margin-left: 1.4rem;
+    font-size: 1.2rem;
+  }
+}
 
 
 .comic-strip-create {
@@ -387,5 +441,8 @@ header {
     overflow: hidden;
     padding-top: 10em;
   }
-}
+
+
+
+
 
