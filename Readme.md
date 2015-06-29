@@ -1,14 +1,21 @@
-## Welcome to My Angular Project
+## Komik app -- making your photos crazy!
 
-> I am your Readme.md file, you should probably update me.
+Welcome to our repo.  Here we've designed a simple app to allow you to upload photos, edit them using props, then save the resulting image.
 
+Deployed link: http://development.tiy-komik-2015.divshot.io/
 
-## Usage
+This was a collaborative effort between all three branches here at the Iron Yard Atlanta.
 
-This template contains some simple `gulp` tasks. They are as follows:
+iOS:
 
+Chris Aaron
+Whitney Hogg
 
-- `gulp watch`: This will launch a Node Server and start the standard `watchlist` task
-- `gulp bower`: This will move the bower components into their proper location. This will run during the `watch` task, but you may need to run it manually once in a while
+Rails:
+Tyler Jones
+Trevor Terris
 
-There are many more tasks, and you really should read through the `gulpfile.js`, but the ones above will take care of you in most cases.
+Front End:
+Kelley Rose
+Leslie Washington
+Joe Joyave

@@ -137,6 +137,22 @@
         });
       };
 
+      $scope.addRotatedImage = function (assetUrl) {
+
+        $('#canvas').drawImage({
+          layer: true,
+          source: assetUrl,
+          draggable: true,
+          bringToFront: true,
+          width: 200,
+          height: 200,
+          rotate: 180,
+          x: 200, y: 200,
+          crossOrigin: 'anonymous',
+          inverted: true
+        });
+      };
+
       $scope.download = function () {
         $('#canvas').saveCanvas();
         var image = $('canvas').getCanvasImage('png');
